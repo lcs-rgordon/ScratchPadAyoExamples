@@ -179,21 +179,29 @@ struct ContentView: View {
             }
             
             // Right column
-            VStack{
+            VStack {
+                
+                // Top row
                 RoundedRectangle(cornerRadius: 10)
                     .fill(mediumGray)
+                    .border(.red)
+
+                // Middle row
                 HStack {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
+                    
+                    ZStack {
                         
+                        RoundedRectangle(cornerRadius: 10)
                             .fill(mediumGray)
                             .frame(height:185)
+                        
                         Image("CPU 2")
                             .resizable()
                             .scaledToFit()
                         
                         VStack{
                             Spacer()
+                            
                             Text("12-Core")
                                 .font(.system(size: 20))
                                 .foregroundStyle(LinearGradient(
@@ -209,18 +217,25 @@ struct ContentView: View {
                         }
                         
                     }
-                    ZStack{
+                    
+                    ZStack {
+                        
                         RoundedRectangle(cornerRadius: 10)
                             .fill(mediumGray)
                             .frame(height:185)
+                        
                         Image("GPU 2")
                             .resizable()
                             .scaledToFit()
                             .frame(height: 100)
-                        VStack{
+                        
+                        VStack {
+                            
                             Spacer()
+                            
                             Text("Up to")
                                 .foregroundStyle(.black)
+                            
                             Text("38-Core")
                                 .font(.system(size:15))
                                 .foregroundStyle(LinearGradient(
@@ -230,19 +245,20 @@ struct ContentView: View {
                                     ],
                                     startPoint: .leading,
                                     endPoint: .center))
+                            
                             Text("GPU")
                                 .foregroundStyle(.black)
-                            
-                            
                             
                         }
                         
                     }
-                    
-                    
                 }
+                .border(.blue)
+
+                // Bottom row
                 RoundedRectangle(cornerRadius: 10)
                     .fill(mediumGray)
+                    .border(.green)
                 
             }
             
